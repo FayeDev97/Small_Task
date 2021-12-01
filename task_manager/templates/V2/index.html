@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <title>Small Task</title>
+</head>
+<body class="bg-purple">
+    <div class="container vh-100 w-50 py-5">
+        <div class="border rounded-top rounded text-light bg-light">
+            {% if tasks %}
+            <h1 class="rounded-top text-center p-0 py-4 m-0 mb-5">Small Task</h1>
+            <div class="task-container m-2">
+                <div class="task-container-header ps-3 d-flex justify-content-between align-items-center">
+                    <h4 class="m-0 p-0 py-3 text-left">On-going Tasks</h4>
+                    <!-- <span id="add_btn" class="d-block fs-2 m-0 p-3 text-light bg-success">+</span> -->
+                </div>
+                <form action="{% url 'task_manager:post'  %}" method="post" class="form d-flex justify-content-between align-items-center">
+                    <input type="text" name="task_text" placeholder="New Task" id="" class="form-control fs-4 py-3 my-2">
+                    <input type="submit" value="Add" class="form-control-s fs-4 text-white bg-success py-3 my-2">
+                </form>
+                <ul class="task-container-body p-o py-1 m-0 mb-3 list-unstyled bg-white">
+                    {% for task in tasks %}
+                    <li class="d-flex justify-content-between align-items-center rounded m-3 my-2 d-flex">
+                        <span class="complete-btn d-block border border-success text-center m-0 py-2 px-2 col-1">✔</span>
+                        <a href="http://" class="d-block text-black text-decoration-none border border-left-none border-right-none border-dark p-2 col-10">{{ task.text }}</a>
+                        <span class="delete-btn d-block border border-danger text-center m-0 py-2 px-2 col-1">❌</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <h3>You're a Champ !</h3>
+                <h4>No Task in hand</h4>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

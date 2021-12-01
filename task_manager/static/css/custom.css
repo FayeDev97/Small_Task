@@ -1,0 +1,114 @@
+@charset "UTF-8";
+a
+{
+    color: rgb(0, 0, 0)!important;
+}
+a:hover
+{
+    color: #0d6efd!important;
+}
+h1
+{
+    background-color: indigo!important;
+    border: 1px solid white!important;
+    border-bottom: 25px solid rgba(255, 255, 255, 0.2) !important;
+    font-weight: bold;
+}
+body
+{
+    background:black url("../assets/background/lemon.jpg") repeat!important;
+    background-size: 350px !important;
+}
+#app
+{
+    min-height: 600px!important;
+}
+#add_btn
+{
+    border-top-right-radius: 8px!important;
+}
+#add_btn:hover
+{
+    cursor: pointer;
+}
+.delete-btn
+{
+    border-top-right-radius: .25rem!important;
+    border-bottom-right-radius: .25rem!important;
+    font: "system-ui"!important;
+}
+.complete-btn
+{
+    border-top-left-radius: .25rem!important;
+    border-bottom-left-radius: .25rem!important;
+    font: "system-ui"!important;
+}
+.complete-btn:hover
+{
+    background-color: #1987544d;
+}
+.delete-btn:hover
+{
+    background-color: #dc35465b;
+}
+.delete-btn:hover,.complete-btn:hover
+{
+    cursor: pointer;
+}
+
+.task-container
+{
+    min-height: 300px!important;
+    border: 1 solid white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 12px 2px rgb(134, 134, 134);
+}
+.task-container-header
+{
+    border-top-left-radius: 8px!important;
+    border-top-right-radius: 8px!important;
+    color: white;
+    font-weight: bold;
+}
+.header-ongoing
+{
+    border-bottom:5px solid rgb(0, 40, 255)!important;
+    background-color: rgba(0, 38, 255, 0.616)!important;
+}
+.header-completed
+{
+    border-bottom:5px solid rgb(10, 122, 0)!important;
+    background-color: rgba(17, 189, 2, 0.8)!important;
+}
+.task-container-body
+.task-container-body > li
+{
+    border-right: none!important;
+}
+.task-text
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: 'Cascadia Code','Amatic SC';
+    color: rgb(255, 149, 100)!important;
+    text-shadow: 1px 1px rgb(102, 100, 0)!important;
+}
+.task-text:hover
+{
+    background-color: rgb(255, 235, 137);
+    color: whitesmoke!important;
+    text-shadow: 1px 2px 2px  rgb(255, 149, 100)!important;
+    font-weight: bold;
+}
+.task-text-complete
+{
+    background-color: rgba(3, 100, 100);
+    color: whitesmoke!important;
+    font-weight: bold;
+}
+.task-text-complete:hover
+{
+    cursor:default;
+    background-color: rgba(3, 100, 100);
+    text-shadow: none!important;
+}
